@@ -19,10 +19,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><img width="30" 
-      src ="http://www.primefaces.org/showcase/javax.faces.resource/main/images/logoBlue.svg.xhtml" />PrimeFaces 
-      
-      <img src="http://www.pivotal.io/sites/all/themes/gopo13/images/oss-logo-spring.png" height="30" /> Integration</a>
+   
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -31,23 +28,25 @@
      
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Orders <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Book <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><h:link value="Orders List" outcome="/views/orders/all.xhtml" /></li>
-            <li class="divider"></li>
-            <li><h:link value="New Order" outcome="/views/orders/new.xhtml" /></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products and Items <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><h:link value="Items List" outcome="/views/items/all.xhtml" /></li>
-            <li class="divider"></li>
-            <li><h:link value="New Item" outcome="/views/items/new.xhtml" /></li>
+            <li><h:link value="Book " outcome="/views/books/all.xhtml" /></li>
+            <!-- <li class="divider"></li> -->
+   
           </ul>
         </li>
       </ul>
+      
+      
+       <p:selectOneMenu id="languages" value="#{languageBean.localeCode}" >
+                <f:selectItem itemLabel="AR" itemValue="ar" />
+                <f:selectItem itemLabel="EN" itemValue="en" />
+                <p:ajax listener="#{languageBean.localeCodeChanged()}"/>
+   </p:selectOneMenu>
+    
+      
     </div><!-- /.navbar-collapse -->
+               
   </div><!-- /.container-fluid -->
 </nav>
       </ui:composition>	

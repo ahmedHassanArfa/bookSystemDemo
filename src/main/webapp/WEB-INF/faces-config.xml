@@ -12,6 +12,15 @@
     		org.springframework.web.jsf.el.SpringBeanFacesELResolver
     	</el-resolver>
     	
+    	 <locale-config>
+            <default-locale>ar</default-locale>
+            <supported-locale>en</supported-locale>
+        </locale-config>
+        <resource-bundle>
+            <base-name>bundle.bundle</base-name>
+            <var>msg</var>
+        </resource-bundle>
+    	
   	</application>
 	
 	

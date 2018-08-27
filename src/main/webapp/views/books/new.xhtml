@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	>
+<h:body>
+	<ui:composition template="/WEB-INF/tags/layout.xhtml">
+		<ui:define name="content">
+			
+			
+			
+				<h:form id="form1" style="">
+					<p:growl id="messages" showDetail="true" />
+
+
+					<p:panel id="panel">
+					<br/>
+   					
+
+
+						<h:panelGrid id="display" columns="2" cellpadding="4">
+
+							<h:outputText value="Price" for="price"
+								style="padding-left: 30px; padding-right: 30px;" />	
+								
+						    <p:inputText id="price" value="#{bookMB.bean.price}"
+								required="true" label="Price"
+								requiredMessage="Required" />
+								
+						    <h:outputText value="Name" for="name"
+								style="padding-left: 30px; padding-right: 30px;" />	
+								
+						    <p:inputText id="name" value="#{bookMB.bean.name}"
+								required="true" label="Name"
+								requiredMessage="Required" />
+
+
+							
+
+							
+
+							<p:outputPanel layout="block" style="text-align:center">
+							<br />
+							<br />
+							<p:commandButton value="Reset" styleClass=""
+								update=":form1:panel" process="@this"
+								actionListener="#{bookMB.reset}" />
+							<p:commandButton value="Save" styleClass=""
+								actionListener="#{bookMB.save}"
+								update=":form1:messages, :form1:panel" />
+						</p:outputPanel>
+
+
+						
+						</h:panelGrid>
+
+
+
+
+
+
+						
+
+
+
+
+					</p:panel>
+
+				</h:form> 
+			
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>
