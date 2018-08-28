@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
-@ManagedBean(name="languageBean")
+import org.springframework.stereotype.Component;
+
+@Component(value="languageBean")
 @SessionScoped
 public class LanguageBean implements Serializable {
 

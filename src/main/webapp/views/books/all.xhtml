@@ -16,8 +16,8 @@
 				
 				<p:commandLink update=":mainForm:form1:new"
 							oncomplete="PF('newDlg').show()" 
-							title="New Book">
-							New Book
+							title="#{msg['ADDBOOK']}">
+							#{msg['ADDBOOK']}
 						</p:commandLink>
 				
 				<p:dataTable id="objects" var="object"
@@ -100,7 +100,7 @@
 							style="padding-left: 30px; padding-right: 30px;" />
 						<p:inputText value="#{bookMB.beanSelected.name}" />
 						
-						<h:outputText value="Description"
+						<h:outputText value="#{msg.DESCRIPTION}"
 							style="padding-left: 30px; padding-right: 30px;" />
 						<p:inputTextarea value="#{bookMB.beanSelected.description}" />
 
@@ -130,7 +130,7 @@
 						style="margin:0 auto;">
 
 
-						<h:outputText value="Price"
+						<h:outputText value="#{msg.PRICE}"
 							style="padding-left: 30px; padding-right: 30px;" />
 						<p:inputText value="#{bookMB.bean.price}" />
 
@@ -140,7 +140,7 @@
 						<p:inputText value="#{bookMB.bean.name}" />
 						
 						
-						<h:outputText value="Description"
+						<h:outputText value="#{msg.DESCRIPTION}"
 							style="padding-left: 30px; padding-right: 30px;" />
 						<p:inputTextarea value="#{bookMB.bean.description}" />
 
