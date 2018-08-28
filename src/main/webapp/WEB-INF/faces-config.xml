@@ -13,8 +13,8 @@
     	</el-resolver>
     	
     	 <locale-config>
-            <default-locale>ar</default-locale>
-            <supported-locale>en</supported-locale>
+            <default-locale>en</default-locale>
+            <supported-locale>ar</supported-locale>
         </locale-config>
         <resource-bundle>
             <base-name>bundle.bundle</base-name>

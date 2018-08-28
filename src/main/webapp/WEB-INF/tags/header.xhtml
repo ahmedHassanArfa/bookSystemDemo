@@ -28,9 +28,9 @@
      
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Book <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">#{msg.BOOK} <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><h:link value="Book " outcome="/views/books/all.xhtml" /></li>
+            <li><h:link value="#{msg.BOOK} " outcome="/views/books/all.xhtml" /></li>
             <!-- <li class="divider"></li> -->
    
           </ul>
@@ -38,11 +38,15 @@
       </ul>
       
       
-       <p:selectOneMenu id="languages" value="#{languageBean.localeCode}" >
+   <!--     <p:selectOneMenu id="languages" value="#{languageBean.localeCode}" >
+      			<f:selectItem itemLabel="" itemValue="" />
                 <f:selectItem itemLabel="AR" itemValue="ar" />
                 <f:selectItem itemLabel="EN" itemValue="en" />
-                <p:ajax listener="#{languageBean.localeCodeChanged()}"/>
+                <p:ajax listener="#{languageBean.localeCodeChanged()}"  update=":mainForm"/>
    </p:selectOneMenu>
+ -->   
+   <p:commandButton value="AR" action="#{languageBean.localeCodeChanged('ar')}" update=":mainForm" />
+   <p:commandButton value="EN" action="#{languageBean.localeCodeChanged('en')}" update=":mainForm" />
     
       
     </div><!-- /.navbar-collapse -->

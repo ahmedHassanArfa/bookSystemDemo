@@ -4,7 +4,6 @@ package org.mycompany.mb;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
@@ -70,6 +69,7 @@ public class BookMB implements Serializable {
 			BookService.save(this.getBean());
 			refreshList();
 			showSuccessMessage("persist item");
+			this.setBean(new Book());
 		} catch (Exception e) {
 			showErrorMessage(e,"persist item");
 			e.printStackTrace();

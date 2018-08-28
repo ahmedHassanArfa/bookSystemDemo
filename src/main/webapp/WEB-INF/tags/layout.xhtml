@@ -38,7 +38,7 @@
    </h:head>
    <h:body> 
    	<div class="container">
- 
+ 	<h:form id="mainForm" >
  	<!-- Header Facelets -->
          <ui:insert name="header" >
             <ui:include src="/WEB-INF/tags/header.xhtml" />
@@ -48,16 +48,18 @@
 
       	<div class="container-fluid" style="min-height:300px">
       	<!-- Content Facelets -->
+         	
          	<ui:insert name="content" >
             
-         	</ui:insert>   
+         	</ui:insert>
+         	
          </div> 
      
      	<!-- Footer Facelets -->
          <ui:insert name="footer" >
             <ui:include src="/WEB-INF/tags/footer.xhtml" />
          </ui:insert>
-    
+    </h:form>   
       </div>
    </h:body>
 </html>
